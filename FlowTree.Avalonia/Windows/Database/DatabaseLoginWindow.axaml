@@ -1,0 +1,97 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="FlowTree.Avalonia.DatabaseLoginWindow"
+        Title="Database Login"
+        Width="360"
+        MinWidth="330"
+        Height="500"
+        MinHeight="450">
+
+    <Grid Background="#1E1E1E">
+
+        <Border Padding="24"
+                MaxWidth="460"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Center"
+                Margin="16"
+                Background="#252525"
+                CornerRadius="12">
+
+            <Grid RowDefinitions="Auto,*,Auto"
+                  RowSpacing="16">
+
+                <TextBlock Grid.Row="0"
+                           Text="Database Login"
+                           FontSize="26"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           HorizontalAlignment="Center"
+                           TextAlignment="Center"/>
+
+                <ScrollViewer Grid.Row="1"
+                              VerticalScrollBarVisibility="Auto">
+
+                    <StackPanel Spacing="14">
+
+                        <TextBlock Text="Server Name"
+                                   Foreground="White"/>
+                        <TextBox x:Name="ServerNameBox"
+                                 PlaceholderText="Enter server name"
+                                 HorizontalAlignment="Stretch"/>
+
+                        <TextBlock Text="Database Name"
+                                   Foreground="White"/>
+                        <TextBox x:Name="DatabaseNameBox"
+                                 PlaceholderText="Enter database name"
+                                 HorizontalAlignment="Stretch"/>
+
+                        <TextBlock Text="Username"
+                                   Foreground="White"/>
+                        <TextBox x:Name="UsernameBox"
+                                 PlaceholderText="Enter username"
+                                 HorizontalAlignment="Stretch"/>
+
+                        <TextBlock Text="Password"
+                                   Foreground="White"/>
+                        <TextBox x:Name="PasswordBox"
+                                 PlaceholderText="Enter password"
+                                 PasswordChar="*"
+                                 HorizontalAlignment="Stretch"/>
+
+                    </StackPanel>
+                </ScrollViewer>
+
+                <Grid Grid.Row="2"
+                      ColumnDefinitions="*,*"
+                      ColumnSpacing="12">
+
+                    <Button Grid.Column="0"
+                            Content="Cancel"
+                            Click="Btn_Cancel"
+                            HorizontalAlignment="Stretch"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            Background="#444444"
+                            Foreground="White"
+                            BorderBrush="#555555"
+                            CornerRadius="8"
+                            Padding="12"/>
+
+                    <Button Grid.Column="1"
+                            Content="Connect"
+                            Click="Btn_Connect"
+                            HorizontalAlignment="Stretch"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            Background="ForestGreen"
+                            Foreground="White"
+                            BorderBrush="#444444"
+                            CornerRadius="8"
+                            Padding="12"/>
+
+                </Grid>
+
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
