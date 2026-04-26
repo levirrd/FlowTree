@@ -18,17 +18,17 @@ namespace FlowTree.Avalonia
             InitializeComponent();
         }
 
-        private void Btn_Cancel(object? sender, RoutedEventArgs e)
+        private void Cancel_Click(object? sender, RoutedEventArgs e)
         {
             Close();
         }
 
-        private async void Btn_Connect(object? sender, RoutedEventArgs e)
+        private async void Connect_Click(object? sender, RoutedEventArgs e)
         {
-            string serverName = ServerNameBox.Text ?? "";
-            string databaseName = DatabaseNameBox.Text ?? "";
-            string username = UsernameBox.Text ?? "";
-            string password = PasswordBox.Text ?? "";
+            string serverName = ServerNameBox.Text ?? string.Empty;
+            string databaseName = DatabaseNameBox.Text ?? string.Empty;
+            string username = UsernameBox.Text ?? string.Empty;
+            string password = PasswordBox.Text ?? string.Empty;
 
             if (string.IsNullOrWhiteSpace(serverName) ||
                 string.IsNullOrWhiteSpace(databaseName) ||
@@ -45,7 +45,6 @@ namespace FlowTree.Avalonia
             try
             {
                 await using var db = new FlowTreeDbContext(connectionString);
-
                 await db.Database.EnsureCreatedAsync();
 
                 await ShowMessage(

@@ -48,7 +48,7 @@ namespace FlowTree.Avalonia
         {
             if (string.IsNullOrWhiteSpace(DatabaseSession.ConnectionString))
             {
-                await ShowMessage("Hiba", "El?ször csatlakozz az adatbázishoz.");
+                await ShowMessage("Error", "Connect to the database first.");
                 return;
             }
 
@@ -96,7 +96,7 @@ namespace FlowTree.Avalonia
         {
             if (_selectedProject == null)
             {
-                await ShowMessage("Hiba", "El?ször válassz ki egy projektet.");
+                await ShowMessage("Error", "Select a project first.");
                 return;
             }
 

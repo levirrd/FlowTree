@@ -33,7 +33,7 @@ namespace FlowTree.Avalonia
 
             if (string.IsNullOrWhiteSpace(title))
             {
-                await ShowMessage("Hiba", "A cím kötelező.");
+                await ShowMessage("Error", "The title is necessary.");
                 return;
             }
 
@@ -52,7 +52,7 @@ namespace FlowTree.Avalonia
             }
             catch (Exception ex)
             {
-                await ShowMessage("Hiba", ex.Message);
+                await ShowMessage("Error", ex.Message);
             }
         }
 

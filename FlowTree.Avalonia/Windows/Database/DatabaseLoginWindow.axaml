@@ -67,7 +67,7 @@
 
                     <Button Grid.Column="0"
                             Content="Cancel"
-                            Click="Btn_Cancel"
+                            Click="Cancel_Click"
                             HorizontalAlignment="Stretch"
                             HorizontalContentAlignment="Center"
                             VerticalContentAlignment="Center"
@@ -79,7 +79,7 @@
 
                     <Button Grid.Column="1"
                             Content="Connect"
-                            Click="Btn_Connect"
+                            Click="Connect_Click"
                             HorizontalAlignment="Stretch"
                             HorizontalContentAlignment="Center"
                             VerticalContentAlignment="Center"
